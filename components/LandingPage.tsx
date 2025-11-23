@@ -50,8 +50,8 @@ export default function LandingPage() {
   return (
     <main className="w-full min-h-screen bg-slate-200">
       {/* HERO */}
-      <div className="w-full flex justify-center mt-6 px-3">
-        <section className="relative w-full mx-8 h-[70vh] rounded-xl overflow-hidden shadow-xl">
+      <div className="w-full flex justify-center md:px-3">
+        <section className="relative w-full md:mx-8 md:h-[70vh] h-[60vh] md:rounded-xl overflow-hidden shadow-xl">
           <video
             autoPlay
             loop
@@ -66,17 +66,17 @@ export default function LandingPage() {
           <div className="absolute inset-0 bg-black/30"></div>
 
           <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4">
-            <p className="text-white/80 tracking-[0.25em] text-xl mb-3 font-light">
+            <p className="text-white/80 tracking-[0.25em] text-[10px] md:text-xl mb-3 font-light">
               STOCKHOLM | BOSTADSFOTO & VIDEO
             </p>
 
-            <h1 className="text-white text-[5rem] font-light leading-tight">
+            <h1 className="text-white  text-2xl md:text-[5rem] font-light leading-tight">
               JONAS SÖDERHOLM
             </h1>
 
             <Link
               href="#gallery"
-              className="text-white/90 italic text-lg mt-6 hover:text-white transition"
+              className="text-white/90 italic  text-sm md:text-lg mt-6 hover:text-white transition"
             >
               Se mer →
             </Link>
@@ -85,12 +85,12 @@ export default function LandingPage() {
       </div>
 
       {/* TABS */}
-      <div className="mt-12 flex justify-center" id="gallery">
+      <div className="mt-6 md:mt-12 flex justify-center" id="gallery">
         <div className="relative flex gap-12">
           <button
             ref={photosTabRef}
             onClick={() => setActiveTab("photos")}
-            className={`pb-3 text-xl tracking-wide transition font-light ${
+            className={`pb-3 text-sm md:text-xl tracking-wide transition font-light ${
               activeTab === "photos"
                 ? "text-black"
                 : "text-gray-500 hover:text-black"
@@ -102,7 +102,7 @@ export default function LandingPage() {
           <button
             ref={videosTabRef}
             onClick={() => setActiveTab("videos")}
-            className={`pb-3 text-xl tracking-wide transition font-light ${
+            className={`pb-3 text-sm md:text-xl tracking-wide transition font-light ${
               activeTab === "videos"
                 ? "text-black"
                 : "text-gray-500 hover:text-black"
@@ -120,7 +120,7 @@ export default function LandingPage() {
       </div>
 
       {/* CONTENT */}
-      <section className="mt-12 px-4 mb-20 flex justify-center">
+      <section className="mt-6 md:mt-12 px-4 mb-20 flex justify-center">
         {activeTab === "photos" && <CleanGallery photos={photos} />}
 
         {activeTab === "videos" && (
