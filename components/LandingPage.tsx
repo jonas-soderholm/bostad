@@ -33,6 +33,7 @@ export default function LandingPage() {
     "/images/bedroom-01.webp",
     "/images/bathroom-03.webp",
     "/images/decor-03.webp",
+    // "/images/decor-03.webp",
   ];
 
   useEffect(() => {
