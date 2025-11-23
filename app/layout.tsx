@@ -22,14 +22,13 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className="scroll-smooth bg-slate-200 h-full">
-      <head /> {/* Next.js handles metadata here */}
+      {/* Next.js handles metadata here */}
+      <head />
       <body
         className={`bg-slate-200 antialiased min-h-screen flex flex-col ${inter.className}`}
       >
         <Navbar />
-
         <main className="flex-1">{children}</main>
-
         <ContactFooter />
       </body>
     </html>
