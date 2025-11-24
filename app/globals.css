@@ -22,17 +22,3 @@
 body {
   @apply bg-slate-200 text-gray-900;
 }
-
-.fade-overlay {
-  animation: fadeOverlayOut 0.6s ease-out forwards;
-}
-
-@keyframes fadeOverlayOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    visibility: hidden;
-  }
-}

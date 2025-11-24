@@ -1,43 +1,38 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function HeroVideo() {
-  const [hidePoster, setHidePoster] = useState(false);
-
-  useEffect(() => {
-    // Poster stays visible for 1 second
-    const t = setTimeout(() => setHidePoster(true), 100);
-    return () => clearTimeout(t);
-  }, []);
+  const [videoReady, setVideoReady] = useState(false);
 
   return (
     <section className="relative w-full md:mx-8 md:h-[70vh] h-[60vh] md:rounded-md overflow-hidden shadow-xl">
-      {/* Gray fade overlay */}
-      <div className="absolute inset-0 z-[999] bg-gray-800 fade-overlay"></div>
+      {/* POSTER stays until video draws first frame */}
+      {!videoReady && (
+        <img
+          src="/images/landingpage-poster.webp"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      )}
 
-      {/* REAL poster div ABOVE the video */}
-      <div
-        className={`absolute inset-0 bg-cover bg-center z-[3] transition-opacity duration-700 ${
-          hidePoster ? "opacity-0" : "opacity-100"
-        }`}
-        style={{ backgroundImage: "url(/images/landingpage-poster.webp)" }}
-      />
-
-      {/* VIDEO underneath poster */}
+      {/* VIDEO underneath — same z-layer */}
       <video
         autoPlay
         loop
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover z-[1]"
+        onLoadedData={() => setVideoReady(true)}
+        className="absolute inset-0 w-full h-full object-cover"
+        poster="/images/landingpage-poster.webp"
       >
+        <source src="/videos/landingpage-video.webm" type="video/webm" />
         <source src="/videos/landingpage-video.mp4" type="video/mp4" />
       </video>
 
-      {/* TEXT */}
-      <div className="absolute inset-0 z-[4] flex flex-col items-center justify-center text-center px-4">
+      {/* TEXT — above everything */}
+      <div className="absolute inset-0 z-[10] flex flex-col items-center justify-center text-center px-4">
         <p className="text-white/80 tracking-[0.25em] text-[10px] md:text-xl mb-3 font-light">
           STOCKHOLM | BOSTADSFOTO & VIDEO
         </p>
