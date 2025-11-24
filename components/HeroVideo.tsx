@@ -2,7 +2,7 @@ export default function HeroVideo() {
   return (
     <section className="relative w-full md:mx-8 md:h-[70vh] h-[60vh] md:rounded-md overflow-hidden shadow-xl">
       {/* Fade overlay on top of everything */}
-      <div className="absolute inset-0 bg-gray-400 z-[999] fade-overlay"></div>
+      <div className="absolute inset-0 bg-gray-800 z-[999] fade-overlay"></div>
 
       {/* Poster */}
       <div
