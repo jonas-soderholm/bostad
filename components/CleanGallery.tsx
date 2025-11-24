@@ -12,7 +12,7 @@ export default function CleanGallery({ photos }: { photos: string[] }) {
         {photos.map((src) => (
           <div
             key={src}
-            className="w-full h-[260px] sm:h-[280px] lg:h-[300px] overflow-hidden shadow cursor-zoom-in"
+            className="w-full h-[260px] sm:h-[280px] lg:h-[383px] overflow-hidden shadow cursor-zoom-in"
             onClick={() => setOpen(src)}
           >
             <img
