@@ -5,9 +5,11 @@ import Navbar from "@/components/NavBar";
 import ContactFooter from "@/components/ContactFooter";
 
 import { Inter } from "next/font/google";
+
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "500"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
