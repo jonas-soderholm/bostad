@@ -57,9 +57,10 @@ export default function LandingPage() {
             loop
             muted
             playsInline
+            preload="auto"
+            poster="/images/landingpage-poster.webp"
             className="absolute inset-0 w-full h-full object-cover"
           >
-            <source src="/videos/landingpage-video.webm" type="video/webm" />
             <source src="/videos/landingpage-video.mp4" type="video/mp4" />
           </video>
 
