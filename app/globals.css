@@ -23,12 +23,11 @@ body {
   @apply bg-slate-200 text-gray-900;
 }
 
-/* Fade overlay */
 .fade-overlay {
-  animation: fadeHeroOverlay 0.7s ease-out forwards;
+  animation: fadeOverlayOut 0.6s ease-out forwards;
 }
 
-@keyframes fadeHeroOverlay {
+@keyframes fadeOverlayOut {
   from {
     opacity: 1;
   }
