@@ -22,13 +22,27 @@ export default function Navbar() {
 
       <nav className="w-full mb-6 flex justify-center bg-slate-200 md:mt-4">
         <div className="flex items-center justify-between w-full mx-12 mt-4 px-4">
-          <div className="flex gap-6 text-sm tracking-wide text-gray-700">
+          {/* MOBILE merged links */}
+          <div className="flex md:hidden w-full justify-center gap-6 text-sm tracking-wide text-gray-700">
+            <Link href="/about" className="hover:text-black">
+              OM MIG
+            </Link>
+            <a href="/#gallery" className="hover:text-black">
+              GALLERI
+            </a>
+            <a href="/#contact" className="hover:text-black">
+              KONTAKT
+            </a>
+          </div>
+
+          {/* DESKTOP left group */}
+          <div className="hidden md:flex gap-6 text-sm tracking-wide text-gray-700">
             <Link href="/about" className="hover:text-black">
               OM MIG
             </Link>
           </div>
 
-          {/* Desktop logo */}
+          {/* DESKTOP logo */}
           <Link href="/" className="text-gray-700 hidden md:flex">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -41,7 +55,8 @@ export default function Navbar() {
             </svg>
           </Link>
 
-          <div className="flex gap-6 text-sm tracking-wide text-gray-700">
+          {/* DESKTOP right group */}
+          <div className="hidden md:flex gap-6 text-sm tracking-wide text-gray-700">
             <a href="/#gallery" className="hover:text-black">
               GALLERI
             </a>

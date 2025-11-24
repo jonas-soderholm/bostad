@@ -51,7 +51,7 @@ export default function LandingPage() {
     <main className="w-full min-h-screen bg-slate-200">
       {/* HERO */}
       <div className="w-full flex justify-center md:px-3">
-        <section className="relative w-full md:mx-8 md:h-[70vh] h-[60vh] md:rounded-xl overflow-hidden shadow-xl">
+        <section className="relative w-full md:mx-8 md:h-[70vh] h-[60vh] md:rounded-md overflow-hidden shadow-xl">
           <video
             autoPlay
             loop
