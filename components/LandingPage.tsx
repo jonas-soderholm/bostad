@@ -34,6 +34,7 @@ export default function LandingPage() {
     "/images/bedroom-01.webp",
     "/images/bathroom-03.webp",
     "/images/decor-03.webp",
+
     // "/images/decor-03.webp",
   ];
 
@@ -50,7 +51,7 @@ export default function LandingPage() {
 
   return (
     <main className="w-full min-h-screen bg-slate-200">
-      {/* HERO */}
+      {/* HERO SSR VIDEO */}
       <div className="w-full flex justify-center md:px-3">
         <HeroVideo />
       </div>
