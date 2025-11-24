@@ -25,31 +25,15 @@ body {
 
 /* Fade overlay */
 .fade-overlay {
-  animation: fadeOverlayOut 0.7s ease-out forwards;
+  animation: fadeHeroOverlay 0.7s ease-out forwards;
 }
 
-@keyframes fadeOverlayOut {
+@keyframes fadeHeroOverlay {
   from {
     opacity: 1;
   }
   to {
     opacity: 0;
     visibility: hidden;
-  }
-}
-
-/* Video starts hidden, fades in over poster */
-.fade-video {
-  opacity: 0; /* important */
-  animation: fadeVideoIn 1.2s ease-out forwards;
-  animation-delay: 0.6s; /* wait until poster is visible */
-}
-
-@keyframes fadeVideoIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
   }
 }

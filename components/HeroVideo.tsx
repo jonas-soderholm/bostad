@@ -1,23 +1,23 @@
 export default function HeroVideo() {
   return (
     <section className="relative w-full md:mx-8 md:h-[70vh] h-[60vh] md:rounded-md overflow-hidden shadow-xl">
-      {/* Fade overlay on top of everything */}
-      <div className="absolute inset-0 bg-gray-800 z-[999] fade-overlay"></div>
+      {/* Fade overlay */}
+      <div className="absolute inset-0 z-[999] bg-gray-800 fade-overlay"></div>
 
-      {/* POSTER (visible immediately) */}
+      {/* Poster (SSR instant) */}
       <div
-        className="absolute inset-0 z-[1] bg-cover bg-center"
+        className="absolute inset-0 z-[1] bg-cover bg-center hero-poster"
         style={{ backgroundImage: "url(/images/landingpage-poster.webp)" }}
       />
 
-      {/* VIDEO (start hidden, fade in after poster) */}
+      {/* Video (behind poster, no fade, no opacity tricks) */}
       <video
         autoPlay
-        loop
         muted
+        loop
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover z-[2] fade-video"
+        className="absolute inset-0 w-full h-full object-cover z-[2]"
       >
         <source src="/videos/landingpage-video.mp4" type="video/mp4" />
       </video>
