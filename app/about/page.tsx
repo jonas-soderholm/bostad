@@ -6,7 +6,7 @@ export default function AboutPage() {
         <img
           src="/images/jonas-soderholm-foto.jpg"
           alt="Jonas Söderholm"
-          className="w-64 h-64 object-cover rounded-xl shadow-md md:w-80 md:h-80"
+          className="w-64 h-64 object-cover md:w-80 md:h-80"
         />
 
         {/* TEXT */}
