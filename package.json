@@ -9,10 +9,10 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "next": "16.0.3",
+    "next": "^16.0.10",
     "photoswipe": "^5.4.4",
-    "react": "19.2.0",
-    "react-dom": "19.2.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
     "react-photo-album": "^3.2.1"
   },
   "devDependencies": {
